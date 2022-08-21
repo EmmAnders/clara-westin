@@ -17,10 +17,12 @@
 // Variables
 :root {
   --green: rgb(75, 78, 54);
+  /*  --light-green: rgba(75, 78, 54, 0.062); */
   --light-green: rgba(75, 78, 54, 0.116);
-  --blue: rgb(224, 232, 245);
+  --blue: rgba(153, 184, 201, 0.425);
   --white: rgba(255, 255, 255, 0.459);
   --default-bg: rgba(243, 242, 237, 1);
+  /*  --default-bg: #e8e6db; */
 
   /* --primary-font: "Source Sans Pro";
   --primary-font: "Arial"; */
@@ -53,13 +55,22 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   font-size: clamp(4rem, 2.5vw, 4.5rem);
   font-family: var(--secondary-font);
 }
 
 h2 {
-  font-size: clamp(3rem, 2.5vw, 3.5rem);
+  font-size: clamp(2.5rem, 2.5vw, 3.5rem);
   font-family: var(--secondary-font);
 }
 h3 {
@@ -76,14 +87,20 @@ p {
   font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
 
+.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 600;
+  font-family: var(--primary-font);
+}
+
 button {
   display: inline-block;
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 500;
-  font-family: var(--secondary-font);
+  /*  font-family: var(--secondary-font); */
   cursor: pointer;
   text-align: center;
   -webkit-appearance: none;
@@ -91,9 +108,10 @@ button {
 }
 
 img {
-  width: 100%;
+  display: block;
+  /*   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; */
   user-drag: none;
   user-select: none;
   -moz-user-select: none;
