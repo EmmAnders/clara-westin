@@ -1,19 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: "jit",
-  purge: [
-    "./components/**/*.{vue,js}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
-  ],
-  darkMode: false, // or 'media' or 'class'
+  content: [],
   theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        primary: "var(--primary-font)",
+        secondary: "var(--secondary-font)",
+      },
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        "light-green": "var(--light-green)",
+        blue: "var(--blue)",
+        "cream-white": "var(--white)",
+        "theme-bg": "var(--theme-bg)",
+        "theme-color": "var(--theme-color)",
+      },
+
+      borderWidth: {
+        thin: "0.5px",
+      },
+
+      opacity: {
+        hover: ".8",
+      },
+    },
   },
   plugins: [],
 };
